@@ -18,10 +18,17 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: radial-gradient(circle at center, #3a3167 0%, #1c1b2f 100%);
+
+  background: #1c1d31;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 * {
@@ -39,4 +46,11 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  /* padding: 2rem 8rem; */
 }

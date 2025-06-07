@@ -1,0 +1,41 @@
+.logo_div {
+  /* padding: 0 4rem; */
+}
+.logo_div h1 {
+  margin-right: 8rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.links_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.top_left_glow {
+  position: absolute;
+  top: -200px;
+  left: -600;
+  width: 1500px;
+  height: 800px;
+  filter: blur(100px);
+  background: radial-gradient(circle, #6b6893 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bottom_right_glow {
+  position: absolute;
+  bottom: -600px;
+  right: -800;
+  width: 1300px;
+  height: 1000px;
+  filter: blur(30px);
+  background: radial-gradient(circle, #264a54 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  -webkit-filter: blur(30px);
+}
