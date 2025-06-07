@@ -23,8 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: radial-gradient(circle at center, #3a3167 0%, #1c1b2f 100%);
-
   background: #1c1d31;
   background-repeat: no-repeat;
   background-size: cover;

@@ -33,7 +33,7 @@ function PreFooter() {
           lineHeight: "0.9",
         }}
       >
-        be a part of the next big thing
+        become financially educated
       </h1>
       <Button
         style={{
@@ -43,7 +43,7 @@ function PreFooter() {
           justifySelf: "center",
           fontSize: "1.5rem",
         }}
-        content="get started"
+        content="start learning"
       />
     </div>
   );

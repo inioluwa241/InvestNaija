@@ -1,5 +1,15 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 function Button(props) {
+  const router = useRouter();
+
   const style = props.style;
+
+  const goto = () => {
+    router.push(props.link);
+  };
+
   return (
     <button
       style={{
@@ -8,6 +18,7 @@ function Button(props) {
         border: "0",
         ...style,
       }}
+      onClick={goto}
     >
       {props.content}
     </button>

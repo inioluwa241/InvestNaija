@@ -1,9 +1,13 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Button from "./Button";
 import Feature from "./Feature";
 import NavBar from "./NavBar";
 import PreFooter from "./PreFooter";
 
 function Hero() {
+  const router = useRouter();
+
   return (
     <section style={{ padding: "2rem 8rem" }}>
       <NavBar />
@@ -36,10 +40,12 @@ function Hero() {
             <Button
               content="Sign Up"
               style={{ background: "#9e9ad5", fontSize: "1.5rem" }}
+              link="../signUp-IN/signUp"
             />
             <Button
               content="Login"
               style={{ background: "#89d0d2", fontSize: "1.5rem" }}
+              link="../signUp-IN/login"
             />
           </div>
         </div>
