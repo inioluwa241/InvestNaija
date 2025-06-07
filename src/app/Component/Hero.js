@@ -7,9 +7,18 @@ function Hero() {
   return (
     <section style={{ padding: "2rem 8rem" }}>
       <NavBar />
-      <section style={{ padding: "9rem 4rem", display: "flex" }}>
+      <section style={{ padding: "4rem 4rem", display: "flex" }}>
         <div>
-          <h1 style={{ fontSize: "6rem", maxWidth: "60%", letterSpacing: "0" }}>
+          <h1
+            style={{
+              fontSize: "6rem",
+              maxWidth: "60%",
+              letterSpacing: "0",
+              lineHeight: "1",
+              display: "flex",
+              alignSelf: "center",
+            }}
+          >
             Grow Your Money To Wealth
           </h1>
           <p
@@ -22,7 +31,7 @@ function Hero() {
             The best place to gain financial insights and secure your future
           </p>
           <div
-            style={{ display: "flex", gap: "1rem", margin: "9rem 0 3rem 0" }}
+            style={{ display: "flex", gap: "1rem", margin: "4rem 0 2rem 0" }}
           >
             <Button
               content="Sign Up"
@@ -50,12 +59,18 @@ function Hero() {
             style={{
               textTransform: "capitalize",
               fontSize: "4rem",
-              margin: "1rem 0 2rem 0",
+              margin: "1rem 0",
             }}
           >
             Built-in analytics to track your growth
           </h1>
-          <h4 style={{ fontSize: "1.3rem", maxWidth: "30rem" }}>
+          <h4
+            style={{
+              fontSize: "1.3rem",
+              maxWidth: "25rem",
+              marginLeft: "2rem",
+            }}
+          >
             Use our built-in analyticsdashboard to pull valuable insight and
             monitor your own growth over time
           </h4>
@@ -64,14 +79,14 @@ function Hero() {
               background: "#9e9ad5",
               fontSize: "1.5rem",
               padding: "1rem 2rem",
-              marginTop: "4rem",
+              marginTop: "3rem",
             }}
             content="View Your Progress"
           />
         </div>
       </section>
 
-      {/* CHECK OUR STOCK PRICING */}
+      {/* CHECK OUR STOCK PRICES */}
       <section
         style={{ display: "flex", padding: "0 4rem ", marginTop: "9rem" }}
       >
@@ -88,7 +103,13 @@ function Hero() {
           >
             Built-in analytics to track your growth
           </h1>
-          <h4 style={{ fontSize: "1.3rem", maxWidth: "30rem" }}>
+          <h4
+            style={{
+              fontSize: "1.3rem",
+              maxWidth: "25rem",
+              marginLeft: "2rem",
+            }}
+          >
             Use our built-in analyticsdashboard to pull valuable insight and
             monitor your own growth over time
           </h4>
@@ -99,7 +120,7 @@ function Hero() {
               padding: "1rem 2rem",
               marginTop: "4rem",
             }}
-            content="View Stock Pricing"
+            content="View Stock Prices"
           />
         </div>
         <div style={{ width: "60rem" }}></div>
@@ -133,15 +154,11 @@ function Hero() {
           />
           <Feature
             title="learning modules"
-            text={` Beginner friendly lessons on Financial concepts and terminolgies. ${(
-              <br />
-            )}Financial literacy contents tailored to nigerian context`}
+            text={` Beginner friendly lessons on Financial concepts and terminolgies. Financial literacy contents tailored to nigerian context`}
           />
           <Feature
             title="glossary and definitions"
-            text={`Definitions of financial terms for broader scope of knowlegde, ${(
-              <br />
-            )} Searchable words for self paced learning `}
+            text={`Definitions of financial terms for broader scope of knowlegde, Searchable words for self paced learning `}
           />
         </div>
         <Button

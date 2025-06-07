@@ -19,7 +19,7 @@ function Feature(props) {
       >
         {props.title}
       </h2>
-      <p>{props.text}</p>
+      <p style={{ margin: "0 3.5rem" }}>{props.text}</p>
     </div>
   );
 }
