@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../Generic-Component/Button";
 import classes from "./navbar.module.css";
 import Link from "next/link";
 

@@ -1,0 +1,10 @@
+.container {
+  background: url("/images/bigBackgd.jpg");
+  height: 18rem;
+  margin: 1.5rem 0;
+  padding: 10px 1rem;
+  border-radius: 20px;
+}
+.container h1 {
+  text-transform: capitalize;
+}

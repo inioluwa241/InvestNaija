@@ -8,7 +8,7 @@ function Feature(props) {
         width: "30%",
         textAlign: "center",
         borderRadius: "15px",
-        // boxShadow: "10px 10px 15px 12px red",
+        boxShadow: "8px 20px 10px rgba(255, 255, 255, 0.05)",
       }}
     >
       <div style={{ height: "4rem" }}></div>

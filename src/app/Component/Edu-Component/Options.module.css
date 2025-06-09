@@ -1,0 +1,21 @@
+.first {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.levels {
+  display: flex;
+  gap: 8px;
+  background: #20293a;
+  border-radius: 20px;
+  padding: 3px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.second {
+  display: flex;
+  gap: 2rem;
+}

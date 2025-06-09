@@ -1,0 +1,56 @@
+.card {
+  border: 1px solid var(--light);
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.card p {
+  color: #9797b1;
+}
+.card h3 {
+  /* color: #a4badf; */
+  text-transform: capitalize;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+.card_image_container {
+  height: 12rem;
+  background: url("/template.png");
+  background-size: cover;
+}
+.to_float {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.to_float p {
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.second_child_div {
+  padding: 1rem;
+  flex: 1;
+  background: #1e1e1e;
+  /* border-radius: 20px; */
+}
+.course_type {
+  display: flex;
+  gap: 8px;
+}
+.course_type p {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  line-height: 1.2rem;
+}

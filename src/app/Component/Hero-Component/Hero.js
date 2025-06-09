@@ -1,9 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Button from "./Button";
+import Button from "../Generic-Component/Button";
 import Feature from "./Feature";
 import NavBar from "./NavBar";
 import PreFooter from "./PreFooter";
+// import Education from "../Edu-Component/Education";
 
 function Hero() {
   const router = useRouter();
@@ -40,12 +41,12 @@ function Hero() {
             <Button
               content="Sign Up"
               style={{ background: "#9e9ad5", fontSize: "1.5rem" }}
-              link="../signUp-IN/signUp"
+              link="../../signUp-IN/signUp"
             />
             <Button
               content="Login"
               style={{ background: "#89d0d2", fontSize: "1.5rem" }}
-              link="../signUp-IN/login"
+              link="../../signUp-IN/login"
             />
           </div>
         </div>
@@ -179,6 +180,14 @@ function Hero() {
             textTransform: "capitalize",
           }}
         />
+      </section>
+
+      <section
+        onClick={function goToEdu() {
+          router.push("../Education");
+        }}
+      >
+        <Button content="view education" />
       </section>
 
       {/* PREFOOTER */}
