@@ -1,15 +1,17 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Button from "./Button";
-import Feature from "./Feature";
 import NavBar from "./NavBar";
+import Feature from "./Feature";
+import Testimonials from "./Testimonials";
 import PreFooter from "./PreFooter";
+import Footer from "./Footer";
 
 function Hero() {
   const router = useRouter();
 
   return (
-    <section style={{ padding: "2rem 8rem" }}>
+    <section >
       <NavBar />
       <section style={{ padding: "4rem 4rem", display: "flex" }}>
         <div>
@@ -53,9 +55,7 @@ function Hero() {
       </section>
 
       {/* MONITOR YOUR GROWTH */}
-      {/* MONITOR YOUR GROWTH */}
-      {/* MONITOR YOUR GROWTH */}
-      <section style={{ display: "flex", padding: "0 4rem " }}>
+      <section className="flex flex-col" style={{padding: "0 4rem " }}>
         <div style={{ width: "60rem" }}></div>
         <div>
           <h5 style={{ textTransform: "uppercase", fontSize: "1.6rem" }}>
@@ -94,7 +94,8 @@ function Hero() {
 
       {/* CHECK OUR STOCK PRICES */}
       <section
-        style={{ display: "flex", padding: "0 4rem ", marginTop: "9rem" }}
+        className="flex flex-col"
+        style={{ padding: "0 0rem ", marginTop: "9rem" }}
       >
         <div>
           <h5 style={{ textTransform: "uppercase", fontSize: "1.6rem" }}>
@@ -130,62 +131,57 @@ function Hero() {
           />
         </div>
         <div style={{ width: "60rem" }}></div>
-      </section>
-      {/* OUR fEATURES */}
-      {/* OUR fEATURES */}
-      {/* OUR fEATURES */}
 
-      <section
-        style={{
-          margin: "7rem 0",
-          background: "linear-gradient(from left, black, red)",
-        }}
-      >
-        <h3
-          style={{
-            textAlign: "center",
-            textTransform: "uppercase",
-            fontSize: "2rem",
-            margin: "2rem 0 4rem 0",
-          }}
-        >
-          {" "}
-          our features
-        </h3>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Feature
-            title="virtual stock trading simulator"
-            text=" Buy/sell Nigerian stocks with virtual currency at simulated prices,
-        Portfolio tracking with profit/loss updates"
+      {/* OUR fEATURES */}
+        <section style={{paddingBlock: "6rem", paddingInline:"5rem"}} className="flex flex-col justify-center items-center gap-10 bg-gray-100 w-full">
+          <div className="flex flex-col items-center gap-4">
+            <h2 className="text-3xl font-bold text-center text-gray-800">HOW IT WORKS</h2>
+            <p className="w-150 text-xl font-regular text-center text-gray-600">Get started in just three simple steps and begin your journey to financial literacy and smart investing.</p>
+          </div>
+          <div style={{marginTop: "5rem"}} className="flex justify-center items-center gap-8">
+            <Feature
+            number="01"
+            title="Create an account"
+            text="Sign up for free in minutes with our streamlined onboarding process and gain access to a world of financial knowledge and tools."
           />
-          <Feature
-            title="learning modules"
-            text={` Beginner friendly lessons on Financial concepts and terminolgies. Financial literacy contents tailored to nigerian context`}
-          />
-          <Feature
-            title="glossary and definitions"
-            text={`Definitions of financial terms for broader scope of knowlegde, Searchable words for self paced learning `}
-          />
-        </div>
-        <Button
-          content="view more"
-          style={{
-            margin: "3rem 0",
-            display: "flex",
-            justifySelf: "center",
-            background: "#9e9ad5",
-            fontSize: "1.5rem",
-            padding: "1rem 2rem",
-            textTransform: "capitalize",
-          }}
-        />
-      </section>
+            <Feature
+              number="02"
+              title="Learn the basics"
+              text={` Access our comprehensive resources tailored to your experience level to understand the fundamentals of investing, from stocks to bonds and beyond.`}
+            />
+            <Feature
+              number="03"
+              title="Start investing"
+              text={`Put your knowledge into practice with our user-friendly platform, where you can start investing in a variety of assets and track your progress.`}
+            />
+          </div>
+        </section>
 
-      {/* PREFOOTER */}
-      {/* PREFOOTER */}
-      {/* PREFOOTER */}
-      <PreFooter />
+        {/*Testimonials*/}
+        <section style={{paddingBlock: "7.5rem", paddingInline:"5rem"}} className="flex flex-col justify-center gap-10 bg-gray-200 w-full">
+          <div className="flex items-center justify-between ">
+            <h2 className="text-5xl font-bold text-center text-gray-800">Our Testimonials</h2>
+            <p className="w-150 text-xl font-regular text-center text-gray-600">Hear from our community of investors who have transformed their financial futures with us.</p>
+          </div>
+          <div style={{marginTop:"5rem"}} className="flex items-center justify-center gap-8">
+            <Testimonials />
+            <Testimonials />
+            <Testimonials />
+          </div>
+        </section>
+      
+      {/* CTA Section */}
+          <section className="flex flex-col justify-center items-center w-full">
+            <PreFooter />
+            <div></div>
+          </section>
+
+      {/* Footer Section*/}
+            <footer className="flex flex-col justify-center items-center w-full bg-gray-800 text-gray-300 py-12">
+              <Footer/>
+            </footer> 
     </section>
+      </section>
   );
 }
 
