@@ -1,11 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Button from "../Generic-Component/Button";
+import Button from "./Button";
 import NavBar from "./NavBar";
 import Feature from "./Feature";
 import Testimonials from "./Testimonials";
 import PreFooter from "./PreFooter";
-// import Education from "../Edu-Component/Education";
 import Footer from "./Footer";
 
 function Hero() {
@@ -43,12 +42,12 @@ function Hero() {
             <Button
               content="Sign Up"
               style={{ background: "#9e9ad5", fontSize: "1.5rem" }}
-              link="../../signUp-IN/signUp"
+              link="../signUp-IN/signUp"
             />
             <Button
               content="Login"
               style={{ background: "#89d0d2", fontSize: "1.5rem" }}
-              link="../../signUp-IN/login"
+              link="../signUp-IN/login"
             />
           </div>
         </div>
@@ -95,7 +94,6 @@ function Hero() {
 
       {/* CHECK OUR STOCK PRICES */}
       <section
-
         className="flex flex-col"
         style={{ padding: "0 0rem ", marginTop: "9rem" }}
       >
@@ -159,18 +157,6 @@ function Hero() {
           </div>
         </section>
 
-      <section
-        onClick={function goToEdu() {
-          router.push("../Education");
-        }}
-      >
-        <Button content="view education" />
-      </section>
-
-      {/* PREFOOTER */}
-      {/* PREFOOTER */}
-      {/* PREFOOTER */}
-      <PreFooter />
         {/*Testimonials*/}
         <section style={{paddingBlock: "7.5rem", paddingInline:"5rem"}} className="flex flex-col justify-center gap-10 bg-gray-200 w-full">
           <div className="flex items-center justify-between ">
@@ -194,7 +180,9 @@ function Hero() {
             <footer className="flex flex-col justify-center items-center w-full bg-gray-800 text-gray-300 py-12">
               <Footer/>
             </footer> 
-            </section>
-            </section>
+    </section>
+      </section>
   );
 }
+
+export default Hero;
