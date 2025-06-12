@@ -1,10 +1,11 @@
-import Hero from "./Component/Hero-Component/Hero";
+import landing from "./Component/Hero-Component/landing";
 import styles from "./page.module.css";
 
-export default function Home() {
+const landingPage = () => {
   return (
     <div>
-      <Hero />
+      <landing/>
     </div>
   );
-}
+};
+export default landing;
