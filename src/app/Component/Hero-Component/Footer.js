@@ -1,11 +1,14 @@
-import Facebook from '@fortawesome/free-brands-svg-icons/faFacebook';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook,faInstagram,faXTwitter,faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+// import fafacebook from "@fortawesome/free-brands-svg-icons/faFacebook";
+// import faTwitter from "@fortawesome/free-brands-svg-icons/faTwitter";
 
 const Footer = () => {
     return(
-        <div style={{padding:"6rem 5rem"}} className="flex flex-col justify-center items-center container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center gap-2">
-               <div className="flex flex-col gap-2.5 items-start mb-8 md:mb-0">
+        <div style={{padding:"8rem 5rem"}} className="flex flex-col justify-start justify-baseline container mx-auto">
+          <div className="flex  justify-between items-center gap-1">
+               <div className="w-75 flex flex-col gap-2.5 items-start mb-8 md:mb-0">
                 {/* Logo and Title */}
                 <div className="flex justify-center items-center text-center">
                      <img
@@ -20,37 +23,39 @@ const Footer = () => {
                     Empowering investors with the tools and knowledge to make
                     smarter financial decisions.
                 </p>
-              <div className="flex space-x-4">
+              <div style={{paddingBlock:"1rem"}} className="flex gap-4 space-x-4">
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
+                  <FontAwesomeIcon icon={faFacebook} />
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  <i className="fab fa-twitter"></i>
+                  <FontAwesomeIcon icon={faXTwitter} />
+
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  <i className="fab fa-instagram"></i>
+                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                 <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </div>
             </div>
                </div>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
+            <div className="flex flex-col gap-2">
+              <h4 className="text-white font-semibold ">Company</h4>
+              <ul className="flex flex-col gap-2 space-y-2">
                 <li>
                   <a
                     href="#"
@@ -86,9 +91,9 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="flex flex-col gap-2">
               <h4 className="text-white font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
+              <ul className="flex flex-col gap-2 space-y-2">
                 <li>
                   <a
                     href="#"
@@ -124,53 +129,27 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Stay Updated</h4>
-              <p className="mb-4">
+            <div className="w-75 flex flex-col gap-3 items-start">
+              <h4 style={{marginBottom:"1.25rem"}} className="text-white font-semibold mb-4">Stay Updated</h4>
+              <p className="mb-4 line-height-6">
                 Subscribe to our newsletter for the latest updates and insights.
               </p>
               <div className="flex">
                 <input
                   type="email"
                   placeholder="Your email"
+                  style={{padding:"0.75rem"}} 
                   className="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none border-none"
                 />
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors !rounded-button cursor-pointer whitespace-nowrap">
-                  <i className="fas fa-paper-plane"></i>
+                <button
+                style={{padding:"0.75rem 1rem"}} 
+                className="bg-[var(--primary)] text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors !rounded-button cursor-pointer whitespace-nowrap">
+                 <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
               </div>
             </div>
           </div>
-
-          <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2025 TradeSmart. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a
-                href="#"
-                className="text-sm hover:text-white transition-colors cursor-pointer"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-sm hover:text-white transition-colors cursor-pointer"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-sm hover:text-white transition-colors cursor-pointer"
-              >
-                Cookies
-              </a>
-            </div>
-            <div className="mt-4 md:mt-0 flex space-x-3">
-              <i className="fab fa-cc-visa text-2xl"></i>
-              <i className="fab fa-cc-mastercard text-2xl"></i>
-              <i className="fab fa-cc-paypal text-2xl"></i>
-            </div>
           </div>
-        </div>
      )
 }
 

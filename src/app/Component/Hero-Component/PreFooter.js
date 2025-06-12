@@ -2,9 +2,9 @@ import Button from "../Generic-Component/Button";
 
 function PreFooter() {
   return (
-      <div  style={{paddingBlock: "6rem", paddingInline:"5rem"}} className="flex justify-center items-center bg-gradient-to-r from-[var(--primary)] to-[var(--gradient)] text-white w-full">
+      <div  style={{paddingBlock: "10rem", paddingInline:"5rem"}} className="flex justify-center items-center bg-gradient-to-r from-[var(--primary)] to-gray-900 text-white w-full">
         <div className="container flex flex-col justify-center items-center mx-auto px-6">
-          <div className="flex flex-col justify-center items-center gap-8 mx-auto text-center">
+          <div className="flex flex-col justify-center items-center gap-10 mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Start Your Investment Journey?
             </h2>

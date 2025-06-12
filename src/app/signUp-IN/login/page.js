@@ -1,9 +1,18 @@
+'use client';
+
 import '@/app/globals.css';
 import Image from 'next/image';
-// import { useState } from 'react';
+import SuccessToast from '@/app/Component/Generic-Component/popup';
+import { useState } from 'react';
 // import { Inter } from 'next/font/google';
 
 const loginApp = () => {
+   const [showSuccess, setShowSuccess] = useState(false);
+   
+   const handleSuccessEvent = () => {
+    setShowSuccess(true);
+   };
+   
   return (
     <div className="login-page min-h-screen flex items-center justify-center bg-white">
       <div  style={{marginTop:'2rem',paddingBottom:'2rem'}} className=" flex flex-col  justify-center gap-12 bg-white p-12 rounded shadow-md w-full min-h-screen">
@@ -57,7 +66,7 @@ const loginApp = () => {
             style={{padding:'2rem'}}
             className="w-128 h-12 px-96 py-6 border border-gray-300 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:font-semibold"
           />
-          <button style={{ marginTop:'3rem', padding:'2rem'}} className=" flex items-center justify-center gap-4 w-128 h-12 px-4 py-6 bg-[var(--primary)] text-white p-2 rounded-4xl hover:bg-white hover:py-12 hover:text-emerald-200 hover:border-2 hover:border-emerald-200 hover:text-xl hover:font-bold cursor-pointer transition duration-200">
+          <button onClick={handleSuccessEvent} style={{ marginTop:'3rem', padding:'2rem'}} className=" flex items-center justify-center gap-4 w-128 h-12 px-4 py-6 bg-[var(--primary)] text-white p-2 rounded-4xl hover:bg-white hover:py-12 hover:text-emerald-200 hover:border-2 hover:border-emerald-200 hover:text-xl hover:font-bold cursor-pointer transition duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
             </svg>
@@ -74,7 +83,17 @@ const loginApp = () => {
           </p>
         </div>
       </div>
+    <div className="p-6">
+
+      <SuccessToast
+        message="Successful!"
+        show={showSuccess}
+        onClose={() => setShowSuccess(false)}
+      />
+    </div>
     </div>
   ); 
-}
+   setShowSuccess(true)
+};
+
 export default loginApp;
