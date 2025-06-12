@@ -17,6 +17,7 @@ function LinkEle(props) {
         fontSize: "1.2rem",
         width: "90%",
         borderRadius: "10px",
+        textDecoration: "none",
       }}
       className={isActive ? classes.active : ""}
     >

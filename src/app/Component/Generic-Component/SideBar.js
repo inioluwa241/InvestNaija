@@ -42,8 +42,11 @@ function SideBar() {
       <LinkEle link="" label="fish" onClick={goTo}>
         fish
       </LinkEle>
-      <LinkEle link="" label="education" onClick={goTo}>
+      <LinkEle link="../../Education" label="education" onClick={goTo}>
         education
+      </LinkEle>
+      <LinkEle link="../../Ai" label="ai assistance" onClick={goTo}>
+        ai assistance
       </LinkEle>
     </nav>
   );
