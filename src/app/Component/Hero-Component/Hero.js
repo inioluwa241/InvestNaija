@@ -33,7 +33,7 @@ import Link from "next/link";
                 </button>
                 <button style={{padding:"1rem 2rem"}} className="flex items-center gap-1 bg-white text-[var(--primary)] px-8 py-3 rounded-lg border border-[var(--primary)] hover:bg-gray-900 transition-colors !rounded-button cursor-pointer whitespace-nowrap">
                   <FontAwesomeIcon icon={faPlayCircle} />  
-                 <Link href="../Education">
+                 <Link href="../DashBoardPage/Education/MainEduPage">
                  Watch Demo
                   </Link>
                 </button>

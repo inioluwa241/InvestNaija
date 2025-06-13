@@ -16,10 +16,10 @@ const Footer = () => {
                     alt="InvestNaija Logo"
                     className="w-10 h-10"
                      />
-                    <h3 className="text-3xl font-bold text-white mb-4">InvestNaija</h3>
+                    <h3 className="text-3xl font-bold text-[var(--primary)] mb-4">InvestNaija</h3>
                 </div>
                 <div>
-                 <p className="mb-4">
+                 <p style={{marginBottom:"1.25rem"}}>
                     Empowering investors with the tools and knowledge to make
                     smarter financial decisions.
                 </p>

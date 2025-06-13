@@ -7,6 +7,7 @@ import Feature from "./Feature";
 import Testimonials from "./Testimonials";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import Head from "next/head";
 
 function landing() {
   const router = useRouter();
@@ -15,6 +16,10 @@ function landing() {
     <section >
       {/*Nav Bar */}
       <section>
+        <Head>
+        <link rel="icon" href="/InvestNaija/public/favicon32.png"/>
+                </Head>
+
         <NavBar />
       </section>
      

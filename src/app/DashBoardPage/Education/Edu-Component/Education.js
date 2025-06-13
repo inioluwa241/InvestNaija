@@ -1,7 +1,7 @@
 import MainEdu from "./MainEdu";
-import "../../Education/Education-global.css";
+import "../MainEduPage/Education-global.css";
 
-const { default: SideBar } = require("../Generic-Component/SideBar");
+const { default: SideBar } = require("../../../DashBoardPage/Generic-Component/SideBar");
 
 function Education() {
   return (
