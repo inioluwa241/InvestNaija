@@ -19,7 +19,7 @@ function SideBar() {
   return (
     <nav
       style={{
-        background: "#1a1a1a",
+        background: "#111111",
         display: "flex",
         flexDirection: "column",
         padding: "1rem 0",

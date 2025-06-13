@@ -1,15 +1,52 @@
+"use client";
 import Ai from "@/app/Ai/page";
 import Header from "./Header";
 import AiMain from "./AiMain";
 import SideBar from "../Generic-Component/SideBar";
+import "../../Ai/Ai-global.css";
+import AiInput from "./AiInput";
+import { useState } from "react";
 
-function AiCompo() {
+function AiCompo(props) {
+  const [messagesArr, setMessageArr] = useState("");
+  let searchObj;
+  const funct = (text) => {
+    fetch("http://localhost:3003", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          console.log(res);
+          return res.json();
+        } else {
+          return;
+        }
+      })
+      .then((data) => {
+        setMessageArr(data.messagesArr);
+        // console.log(
+        //   `the message is :${data.messagesArr}, while the reply is ${data.reply}`
+        // );
+      });
+  };
+
   return (
-    <section style={{ display: "flex" }}>
+    <section
+      style={{
+        display: "flex",
+        height: "100vh",
+        overflow: "hidden",
+        // flex: "1",
+        background: "var(--lightest-background)",
+      }}
+    >
       <SideBar />
-      <div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <Header />
-        <AiMain />
+        <AiMain textArrObj={messagesArr} />
+        <AiInput onSendMessage={funct} />
       </div>
     </section>
   );

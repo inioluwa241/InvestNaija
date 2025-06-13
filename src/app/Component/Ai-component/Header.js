@@ -8,9 +8,10 @@ function Header() {
       style={{
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         textTransform: "capitalize",
         padding: "1rem",
-        background: "var(--semi-main-background)",
+        background: "var(--darkest-background)",
       }}
     >
       <FontAwesomeIcon icon={faArrowLeft} style={{ width: "1rem" }} />
@@ -18,6 +19,8 @@ function Header() {
       <div
         style={{
           display: "flex",
+          alignItems: "center",
+
           gap: "1rem",
         }}
       >
@@ -27,6 +30,7 @@ function Header() {
             padding: "8px",
             borderRadius: "12px",
             display: "flex",
+            alignItems: "center",
             gap: "8px",
           }}
         >
@@ -45,7 +49,6 @@ function Header() {
             alignContent: "center",
             placeContent: "center",
             // justifyContent: "center",
-            margin: "auto 0",
           }}
         >
           {/* suppose to hold user identification, mustly an image */}

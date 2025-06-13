@@ -4,18 +4,34 @@ function WelcomeSection() {
   return (
     <article
       style={{
-        borderRadius: "10px",
-        background: "var(--semi-main-background)",
+        borderRadius: "20px",
+        background: "var(--darkest-background)",
         border: "1px solid var(--border)",
+        padding: "1.5rem",
       }}
     >
-      <h2>you AI learning assistant</h2>
+      <h2
+        style={{
+          textTransform: "capitalize",
+          textAlign: "center",
+          marginBottom: "1rem",
+        }}
+      >
+        your AI learning assistant
+      </h2>
       <p>
         Ask me anything about trading,market analysis, portfolio management or
         investment stragies.i'm here to provise data-driven insights and help
         you make informed decisions
       </p>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "1rem",
+          marginTop: "1.5rem",
+        }}
+      >
         <LikelyQuestions
           heading="trading analysis"
           text="Technical patterns, indicators, and entry/exit points"
