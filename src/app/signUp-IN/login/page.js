@@ -2,7 +2,7 @@
 
 import "@/app/globals.css";
 import Image from "next/image";
-import SuccessToast from "@/app/Component/Generic-Component/popup";
+import SuccessToast from "@/app/DashBoardPage/Generic-Component/popup";
 import { useState } from "react";
 // import { Inter } from 'next/font/google';
 

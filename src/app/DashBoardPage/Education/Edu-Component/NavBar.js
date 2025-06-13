@@ -6,7 +6,7 @@ import {
   faBookmark,
   faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
-import "../../Education/Education-global.css";
+import "../MainEduPage/Education-global.css";
 import classes from "./NavBar.module.css";
 
 function NavBar() {

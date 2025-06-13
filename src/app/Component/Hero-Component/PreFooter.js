@@ -1,5 +1,3 @@
-import Button from "../Generic-Component/Button";
-
 function PreFooter() {
   return (
       <div  style={{paddingBlock: "10rem", paddingInline:"5rem"}} className="flex justify-center items-center bg-gradient-to-r from-[var(--primary)] to-gray-900 text-white w-full">
@@ -28,7 +26,7 @@ function PreFooter() {
                 Get Started
               </button>
             </div>
-            <p className="text-sm text-blue-200">
+            <p className="text-sm text-gray-400">
               Free 14-day trial. No credit card required.
             </p>
           </div>

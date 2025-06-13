@@ -1,4 +1,11 @@
-const signupApp = ( ) => {
+'use client';
+
+const signupApp = () => {
+    const handleSuccessEvent = () => {
+        // Add your form submission logic here
+        console.log('Form submitted');
+    };
+
     return (
         <div  className="flex flex-col items-center justify-center bg-white min-h-screen">
             <div style={{marginTop:'2rem',paddingBottom:'2rem'}} className="flex flex-col justify-center gap-12 bg-white shadow-md w-full h-full ">
