@@ -3,7 +3,7 @@ import EduLevelSection from "./EduLevelSections";
 function Advanced() {
   return (
     <section style={{ marginTop: "4rem" }}>
-      <EduLevelSection level="advance" color="251,109, 105" />
+      <EduLevelSection level="Advanced" color="251,109, 105" />
     </section>
   );
 }

@@ -38,7 +38,7 @@ function Options() {
 
         <div>
           <div>
-            <p>show completed</p>
+            <p className="text-indigo-600">Show completed</p>
           </div>
         </div>
       </div>

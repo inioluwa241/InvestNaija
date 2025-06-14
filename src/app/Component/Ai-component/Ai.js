@@ -1,12 +1,12 @@
 "use client";
-import Ai from "@/app/Ai/page";
+// import Ai from "@/app/Ai/page";
 import Header from "./Header";
 import AiMain from "./AiMain";
 // import SideBar from "../Generic-Component/SideBar";
 import "../../Ai/Ai-global.css";
 import AiInput from "./AiInput";
 import { useState } from "react";
-import SideBar from "@/app/DashBoardPage/Generic-Component/SideBar";
+import SideBar from '../../DashBoardPage/Generic-Component/SideBar'
 
 function AiCompo(props) {
   const [messagesArr, setMessageArr] = useState("");

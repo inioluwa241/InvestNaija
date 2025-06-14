@@ -43,7 +43,7 @@ const Hero = () => {
                 className="flex items-center gap-1 bg-white text-[var(--primary)] px-8 py-3 rounded-lg border border-[var(--primary)] hover:bg-gray-900 transition-colors !rounded-button cursor-pointer whitespace-nowrap"
               >
                 <FontAwesomeIcon icon={faPlayCircle} />
-                <Link href="../DashBoardPage/Education/MainEduPage">
+                <Link href="../DashBoardPage/DashBoard/MainPage">
                   Watch Demo
                 </Link>
               </button>

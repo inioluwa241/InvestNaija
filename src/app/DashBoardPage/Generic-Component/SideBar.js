@@ -25,16 +25,15 @@ function SideBar() {
     const isActive = pathname.slice(1).toLowerCase() == linkText;
   };
 
-  return (
-    <nav
-      style={{ padding: "2rem .75rem", width: "17rem", background: "#111111" }}
-      className="flex flex-col items-start justify-start bg-[#1a1a1a] text-white rounded-lg border-[#1a1a1a] min-h-screen shadow-lg border-r border-light"
-    >
+
+  return(
+    <nav  
+    style={{padding:"2rem .75rem", width:"15rem"}}
+    className="flex flex-col items-start justify-start bg-[#1a1a1a] text-white rounded-lg border-[#1a1a1a] h-screen hidden shadow-lg border-r border-light">
       {/* Logo and Name */}
-      <div
-        style={{ marginBottom: "2rem" }}
-        className="flex items-start justify-start mb-4"
-      >
+      <div 
+      style = {{marginBottom:"2rem"}}
+      className="flex items-start justify-start mb-4">
         <img
           src="/images/logo.png"
           alt="InvestNaijaLogo"
@@ -54,7 +53,7 @@ function SideBar() {
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
             icon={faHome}
           />
-          <Link href="../../DashBoardPage/DashBoard">Dashboard</Link>
+          <Link href="../../DashBoardPage/DashBoard/MainPage">Dashboard</Link>
         </li>
         <li
           style={{ padding: "10px 15px" }}
@@ -65,7 +64,7 @@ function SideBar() {
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
             icon={faChartLine}
           />
-          <Link href="../Portfolio">Portfolio</Link>
+          <Link href="../../DashBoardPage/Portfolio">Portfolio</Link>
         </li>
         <li
           style={{ padding: "10px 15px" }}
@@ -100,7 +99,7 @@ function SideBar() {
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
             icon={faWandSparkles}
           />
-          <Link href="../../Ai/">AI assistant</Link>
+          <Link href="../../Ai/">AI Assistant</Link>
         </li>
       </ul>
     </nav>
