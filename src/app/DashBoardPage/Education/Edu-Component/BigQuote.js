@@ -2,10 +2,9 @@ import classes from "./BigQuote.module.css";
 
 function BigQuote() {
   return (
-    <div className={classes.container}>
-      <h1>funfact</h1>
-      <p>Inioluwa is the fact fact,e shock you ba</p>
-      <p>inioluwa ebifredrick</p>
+    <div href="https://youtu.be/J-ntsk7Dsd0?si=uHGALM65k54IZo1k" className={classes.container}>
+      <h1 style={{marginTop:"1rem"}} className="text-3xl font-bold">How to Read Stock Charts (For Beginners)</h1>
+      <p>Stock Market Basics, Made Simple.</p>
     </div>
   );
 }
