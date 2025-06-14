@@ -1,6 +1,11 @@
 import LikelyQuestions from "./LikelyQuestions";
 
-function WelcomeSection() {
+function WelcomeSection(props) {
+  const handleClick = (e) => {
+    props.onclick(e.target.id);
+    console.log(e.target);
+  };
+
   return (
     <article
       style={{
@@ -35,18 +40,26 @@ function WelcomeSection() {
         <LikelyQuestions
           heading="trading analysis"
           text="Technical patterns, indicators, and entry/exit points"
+          onclick={handleClick}
+          id={1}
         />
         <LikelyQuestions
           heading="Market Insights"
           text="Trends, news impact, and sector analysis"
+          onclick={handleClick}
+          id={2}
         />
         <LikelyQuestions
           heading="Portfolio Recommendations"
           text="Allocation advice, diversification, and risk assessment"
+          onclick={handleClick}
+          id={3}
         />
         <LikelyQuestions
           heading="Educational Support"
           text="Learning resources, terminology, and strategy explanations"
+          onclick={handleClick}
+          id={4}
         />
       </div>
     </article>

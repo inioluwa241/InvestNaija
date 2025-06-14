@@ -2,14 +2,16 @@
 import Ai from "@/app/Ai/page";
 import Header from "./Header";
 import AiMain from "./AiMain";
-import SideBar from "../Generic-Component/SideBar";
+// import SideBar from "../Generic-Component/SideBar";
 import "../../Ai/Ai-global.css";
 import AiInput from "./AiInput";
 import { useState } from "react";
+import SideBar from "@/app/DashBoardPage/Generic-Component/SideBar";
 
 function AiCompo(props) {
   const [messagesArr, setMessageArr] = useState("");
-  let searchObj;
+  // const [responseArr, setResponseArr] = useState("");
+
   const funct = (text) => {
     fetch("http://localhost:3003", {
       method: "POST",
@@ -18,7 +20,7 @@ function AiCompo(props) {
     })
       .then((res) => {
         if (res.ok) {
-          console.log(res);
+          // console.log(res);
           return res.json();
         } else {
           return;
@@ -26,9 +28,8 @@ function AiCompo(props) {
       })
       .then((data) => {
         setMessageArr(data.messagesArr);
-        // console.log(
-        //   `the message is :${data.messagesArr}, while the reply is ${data.reply}`
-        // );
+        // setResponseArr(data.responseArr);
+        // console.log(`the message is : while the reply is ${data.reply}`);
       });
   };
 
@@ -42,10 +43,11 @@ function AiCompo(props) {
         background: "var(--lightest-background)",
       }}
     >
+      {/* <SideBar /> */}
       <SideBar />
       <div style={{ display: "flex", flexDirection: "column" }}>
         <Header />
-        <AiMain textArrObj={messagesArr} />
+        <AiMain messagesArrObj={messagesArr} />
         <AiInput onSendMessage={funct} />
       </div>
     </section>

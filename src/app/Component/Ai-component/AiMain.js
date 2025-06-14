@@ -5,9 +5,21 @@ import AiInput from "./AiInput";
 import WelcomeSection from "./WelcomeSecion";
 
 function AiMain(props) {
-  const [messagesArr, setMessageArr] = useState([]);
-  console.log(props.textArrObj);
-  const textArrObj = props.textArrObj;
+  const [messagesArr, setMessageArr] = useState(" ");
+  console.log(props.messagesArrObj);
+  // const messagesArrObj = props.messagesArrObj;
+  // const responseArrObj = props.responseArr;
+  // console.log(responseArrObj);
+
+  const getIt = function (id) {
+    fetch("http://localhost:3003", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    })
+      .then((res) => res.json())
+      .then((data) => setMessageArr(data));
+  };
 
   return (
     <section
@@ -21,7 +33,7 @@ function AiMain(props) {
         flex: "1",
       }}
     >
-      <WelcomeSection />
+      <WelcomeSection onclick={getIt} />
       <article
         style={{
           display: "flex",
@@ -43,15 +55,31 @@ function AiMain(props) {
             marginBottom: "4rem",
           }}
         >
-          {textArrObj
-            ? textArrObj.map((message, index) => {
+          <pre
+            style={{
+              margin: "0 0 2rem 0",
+              fontFamily: "inherit",
+              lineHeight: "1",
+              whiteSpace: "pre-wrap",
+              background: "var(--light-background)",
+              maxWidth: "35rem",
+              padding: "1rem 1.3rem",
+              alignSelf: "flex-start",
+              borderRadius: "25px",
+            }}
+          >
+            {messagesArr}
+          </pre>
+          {/* {messagesArrObj
+            ? messagesArrObj.map((message, index) => {
+                const odd = index % 2 === 0;
                 return (
                   <p
                     key={index}
                     style={{
                       background: "blue",
                       padding: "1rem 1.3rem",
-                      alignSelf: "flex-end",
+                      alignSelf: odd ? "flex-end" : "flex-start",
                       borderRadius: "25px",
 
                       // display: "inline",
@@ -64,7 +92,7 @@ function AiMain(props) {
                   </p>
                 );
               })
-            : ""}
+            : ""} */}
         </div>
       </article>
     </section>
