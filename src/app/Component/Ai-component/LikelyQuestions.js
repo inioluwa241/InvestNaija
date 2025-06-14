@@ -9,7 +9,12 @@ function LikelyQuestions(props) {
         background: "var(--light-background)",
         borderRadius: "10px",
         padding: "1rem",
+        fontSize: "0.9rem",
+        border: "1px solid var(--border)",
+        cursor: "pointer",
       }}
+      onClick={props.onclick}
+      id={props.id}
     >
       <FontAwesomeIcon icon={faEarth} style={{ width: "1rem" }} />
       <h3 style={{ textTransform: "capitalize" }}>{props.heading}</h3>

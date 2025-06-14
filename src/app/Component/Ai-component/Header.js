@@ -1,6 +1,7 @@
 import "../../Ai/Ai-global.css";
 import { faArrowLeft, faBell, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWandSparkles } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
@@ -8,16 +9,26 @@ function Header() {
       style={{
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         textTransform: "capitalize",
         padding: "1rem",
-        background: "var(--semi-main-background)",
+        background: "var(--darkest-background)",
       }}
     >
       <FontAwesomeIcon icon={faArrowLeft} style={{ width: "1rem" }} />
-      <h3>ai assistant</h3>
+        <div className="flex items-center">
+                  <FontAwesomeIcon
+                  className="text-white"
+                  style={{ width: "20px", height: "20px", marginRight: "10px" }}
+                  icon={faWandSparkles}
+                />
+      <h3 className="text-2xl font-bold">AI Assistant</h3>
+        </div>
       <div
         style={{
           display: "flex",
+          alignItems: "center",
+
           gap: "1rem",
         }}
       >
@@ -27,30 +38,15 @@ function Header() {
             padding: "8px",
             borderRadius: "12px",
             display: "flex",
+            alignItems: "center",
             gap: "8px",
           }}
         >
           <FontAwesomeIcon icon={faStar} style={{ width: "1rem" }} />
 
-          <p>free plan</p>
+          <p>Free Plan</p>
         </div>
         <FontAwesomeIcon icon={faBell} style={{ width: "1rem" }} />
-        <div
-          style={{
-            borderRadius: "50%",
-            background: "blue",
-            height: "2rem",
-            width: "2rem",
-            display: "flex",
-            alignContent: "center",
-            placeContent: "center",
-            // justifyContent: "center",
-            margin: "auto 0",
-          }}
-        >
-          {/* suppose to hold user identification, mustly an image */}
-          <h4>IF</h4>
-        </div>
       </div>
     </header>
   );

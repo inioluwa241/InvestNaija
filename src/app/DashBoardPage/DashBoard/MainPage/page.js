@@ -2,7 +2,6 @@ import SideBar from "../../Generic-Component/SideBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-
 const DashboardApp = () => {
     const newsItems = [
         { id: 1, title: "Market Update: Stocks Rally on Tech Earnings", source: "Finance News", time: "2h ago" },
@@ -110,10 +109,9 @@ const DashboardApp = () => {
               </div>
             ))}
           </div>
-            </div>
-        </div>
-     </section>
-    );
-}
+          </div>
+     </div>
+   
+    </section>)};
 
 export default DashboardApp;

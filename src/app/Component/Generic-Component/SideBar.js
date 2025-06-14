@@ -1,7 +1,7 @@
 "use client";
-import classes from "./Active.module.css";
-import LinkEle from "./Link";
-import "../../Education/Education-global.css";
+// import classes from "./Active.module.css";
+import LinkEle from "@/app/DashBoardPage/Generic-Component/Link";
+import "../../DashBoardPage/Education/MainEduPage/Education-global.css";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ function SideBar() {
   return (
     <nav
       style={{
-        background: "#1a1a1a",
+        background: "#111111",
         display: "flex",
         flexDirection: "column",
         padding: "1rem 0",

@@ -1,13 +1,18 @@
 "use client";
-import classes from "./Active.module.css";
-import LinkEle from "./Link";
+// import classes from "./Active.module.css";
+// import LinkEle from "./Link";
 import "../Education/MainEduPage/Education-global.css";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBook, faUsers, faChartLine } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faHome,
+  faBook,
+  faUsers,
+  faChartLine,
+  faWandSparkles,
+} from "@fortawesome/free-solid-svg-icons";
 
 function SideBar() {
   // const [active,setActive]=useState()
@@ -19,6 +24,7 @@ function SideBar() {
     const linkText = event.currentTarget.textContent.toLowerCase();
     const isActive = pathname.slice(1).toLowerCase() == linkText;
   };
+
 
   return(
     <nav  
@@ -33,28 +39,71 @@ function SideBar() {
           alt="InvestNaijaLogo"
           style={{ width: "30px", height: "30px", marginBottom: "1rem" }}
         />
-      <h1 className="text-[var(--primary)] text-2xl font-bold">InvestNaija</h1>
+        <h1 className="text-[var(--primary)] text-2xl font-bold">
+          InvestNaija
+        </h1>
       </div>
       <ul className="flex flex-col gap-3.5 w-full">
-        <li style = {{padding:"10px 15px"}} className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors">
-          <FontAwesomeIcon className="text-white" style={{width:"20px", height:"20px", marginRight:"10px"}} icon={faHome} />
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            icon={faHome}
+          />
           <Link href="../../DashBoardPage/DashBoard/MainPage">Dashboard</Link>
         </li>
-        <li style = {{padding:"10px 15px"}} className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors">
-          <FontAwesomeIcon className="text-white" style={{width:"20px", height:"20px", marginRight:"10px"}} icon={faChartLine} />
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            icon={faChartLine}
+          />
           <Link href="../../DashBoardPage/Portfolio">Portfolio</Link>
         </li>
-        <li style = {{padding:"10px 15px"}} className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors">
-          <FontAwesomeIcon className="text-white" style={{width:"20px", height:"20px", marginRight:"10px"}} icon={faUsers} />
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            icon={faUsers}
+          />
           <Link href="../Community">Community</Link>
         </li>
-        <li style = {{padding:"10px 15px"}} className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors">
-          <FontAwesomeIcon className="text-white" style={{width:"20px", height:"20px", marginRight:"10px"}} icon={faBook} />
-          <Link href="../../DashBoardPage/Education/MainEduPage">Education</Link>
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            icon={faBook}
+          />
+          <Link href="../../DashBoardPage/Education/MainEduPage">
+            Education
+          </Link>
+        </li>
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+            icon={faWandSparkles}
+          />
+          <Link href="../../Ai/">AI Assistant</Link>
         </li>
       </ul>
     </nav>
-  )
+  );
 
   // return (
   //   <nav
