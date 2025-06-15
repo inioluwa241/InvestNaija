@@ -5,8 +5,13 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      style={{ padding: "15rem 0rem" }}
-      className="relative overflow-hidden bg-gray-900"
+      style={{
+        padding: "15rem 0rem",
+        background: "#101727",
+        width: "100%",
+        paddingLeft: "5rem",
+      }}
+      className="relative overflow-hidden "
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 z-0"></div>
       <div className="absolute right-0 top-0 w-full h-full overflow-hidden z-0 bg-gray-900">
