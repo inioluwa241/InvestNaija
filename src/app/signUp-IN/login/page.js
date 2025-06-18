@@ -97,7 +97,7 @@ const loginApp = () => {
             type="email"
             placeholder="helloyou@gmail.com"
             style={{ padding: "2rem" }}
-            className="w-128 h-12 px-4 py-6 border border-gray-300 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200  focus:ring-opacity-50  placeholder:text-gray-300 placeholder:font-semibold"
+            className="text-gray-800 w-128 h-12 px-4 py-6 border border-gray-300 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200  focus:ring-opacity-50  placeholder:text-gray-300 placeholder:font-semibold"
           />
           <input
             type="password"
@@ -106,7 +106,7 @@ const loginApp = () => {
             maxLength="20"
             placeholder="Enter your password"
             style={{ padding: "2rem" }}
-            className="w-128 h-12 px-96 py-6 border border-gray-300 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:font-semibold"
+            className="text-gray-800  w-128 h-12 px-96 py-6 border border-gray-300 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:font-semibold"
           />
           <button onClick={handleSuccessEvent} style={{ marginTop:'3rem', padding:'2rem'}} className=" flex items-center justify-center gap-4 w-128 h-12 px-4 py-6 bg-[var(--primary)] text-white p-2 rounded-4xl hover:bg-white hover:py-12 hover:text-emerald-200 hover:border-2 hover:border-emerald-200 hover:text-xl hover:font-bold cursor-pointer transition duration-200">
             <FontAwesomeIcon icon={faEnvelope} />
