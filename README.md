@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InvestNaija
 
-## Getting Started
+**Empowering Nigerians with financial literacy through gamified stock market simulation.**
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**InvestNaija** is a web-based platform that simulates the Nigerian stock market, enabling users—especially students and young adults—to learn about investing through gamified experiences.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The platform is designed to bridge the financial literacy gap in Nigeria by offering:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Simulated stock trading with real-time data mimicry
+- Beginner-friendly lessons on money, savings, and investments
+- A leaderboard system that motivates users to learn through competition
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 📈 Real-Time Stock Simulation (via mocked WebSocket updates)
+- 🎓 Financial Literacy Modules tailored for Nigerian youth
+- 🏆 Gamification: Badges, rewards, and leaderboards
+- 📊 User Portfolio Tracking
+- 📚 Investment Terms Glossary
+- 🇳🇬 Nigeria-Focused Stocks and Economic Context
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Frontend        | Backend           | Authentication | Data & Tools       |
+| --------------- | ----------------- | -------------- | ------------------ |
+| Next.js (React) | Node.js + Express | Keycloak       | MongoDB            |
+| Redux Toolkit   | REST API          | JWT            | Chart.js           |
+| Tailwind CSS    |                   |                | WebSocket (mocked) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+The investNaija application is still undergoing development and cannot be fully optimized by users yet
+as only its desktop view has been done and some features are still yet to be implemented

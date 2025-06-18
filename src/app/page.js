@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 
 const landingPage = () => {
   return (
-    <div>
-      <landing/>
+    <div className="bg-gray-900">
+      <landing />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";  
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
     
     const Hero = () => {
