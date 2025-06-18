@@ -12,6 +12,7 @@ import {
   faUsers,
   faChartLine,
   faWandSparkles,
+  faGear
 } from "@fortawesome/free-solid-svg-icons";
 
 function SideBar() {
@@ -29,7 +30,7 @@ function SideBar() {
   return(
     <nav  
     style={{padding:"2rem .75rem", width:"15rem"}}
-    className="flex flex-col items-start justify-start bg-[#1a1a1a] text-white rounded-lg border-[#1a1a1a] h-screen hidden shadow-lg border-r border-light">
+    className="flex flex-col items-start justify-start bg-[#1a1a1a] text-white rounded-lg border-[#1a1a1a] h-screen overflow-hidden shadow-lg border-r border-light">
       {/* Logo and Name */}
       <div 
       style = {{marginBottom:"2rem"}}
@@ -100,6 +101,17 @@ function SideBar() {
             icon={faWandSparkles}
           />
           <Link href="../../Ai/">AI Assistant</Link>
+        </li>
+        <li
+          style={{ padding: "10px 15px" }}
+          className="w-full h-5 hover:bg-[var(--primary)] rounded-lg transition-colors"
+        >
+          <FontAwesomeIcon
+            className="text-white"
+            style={{ width: "20px", height: "20px", marginRight: "10px", marginTop:"100%"}}
+            icon={faGear}
+          />
+          <Link href="#">Settings</Link>
         </li>
       </ul>
     </nav>

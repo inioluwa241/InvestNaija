@@ -50,14 +50,13 @@ const signupApp = () => {
                     type="text"
                     placeholder="Username"
                     style={{padding:'2rem'}}
-
-                    className="w-128 h-12 py-12 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:ml-24"
+                    className="w-128 h-12 py-12 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 text-gray-800"
                     />
                     <input
                         type="email"
                         placeholder="Email address"
                         style={{padding:'2rem'}}
-                        className="w-128 h-12 px-4 py-6 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300"
+                        className="w-128 h-12 px-4 py-6 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 text-gray-800"
                     />
                     <input
                         type="password"
@@ -66,7 +65,7 @@ const signupApp = () => {
                         maxLength="20"
                         placeholder="Create a password"
                         style={{padding:'2rem'}}
-                        className="w-128 h-12 px-4 py-6 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:font-semibold"
+                        className="w-128 h-12 px-4 py-6 border border-gray-400 rounded-4xl focus:outline-none focus:ring-1 focus:ring-emerald-200 focus:ring-opacity-50 placeholder:text-gray-300 placeholder:font-semibold text-gray-800"
                     />
                       <button onClick={handleSuccessEvent} style={{ marginTop:'3rem', padding:'2rem'}} className=" flex items-center justify-center gap-4 w-128 h-12 px-4 py-6 mb-24 bg-[var(--primary)] text-white p-2 rounded-4xl hover:bg-white hover:py-12 hover:text-emerald-200 hover:border-2 hover:border-emerald-200 hover:text-xl hover:font-bold cursor-pointer transition duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

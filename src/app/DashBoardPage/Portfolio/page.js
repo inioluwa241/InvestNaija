@@ -1,17 +1,17 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
+ import dynamic from 'next/dynamic';
 import * as echarts from 'echarts';
 // import Header from "./HeaderComp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartLine, faSyncAlt, faSearch, faBell, faUser, faPlus, faMinus, faDrawPolygon, faExpandAlt } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faSyncAlt, faSearch, faBell, faUser, faPlus, faMinus, faDrawPolygon, faExpandAlt, faCaretUp, faCaretDown} from '@fortawesome/free-solid-svg-icons';
 import SideBar from "../Generic-Component/SideBar"
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('buy');
   const [quantity, setQuantity] = useState('1');
   const [orderType, setOrderType] = useState('market');
-  const [stockSymbol, setStockSymbol] = useState('AAPL');
+  const [stockSymbol, setStockSymbol] = useState('OND');
   const [timeframe, setTimeframe] = useState('1D');
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -23,21 +23,29 @@ const App = () => {
   const priceChangePercent = 1.87;
   
   const portfolioStocks = [
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 10, avgPrice: 165.32, currentPrice: 178.42, change: 7.92 },
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 5, avgPrice: 320.45, currentPrice: 338.11, change: 5.51 },
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 3, avgPrice: 132.18, currentPrice: 129.82, change: -1.79 },
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 8, avgPrice: 142.56, currentPrice: 149.84, change: 5.11 },
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 12, avgPrice: 218.76, currentPrice: 201.43, change: -7.92 },
+    { symbol: 'CON', name: 'CONOIL', shares: 10, avgPrice: 165.32, currentPrice: 178.42, change: 7.92 },
+    { symbol: 'ZNT', name: 'Zenith Bank', shares: 5, avgPrice: 320.45, currentPrice: 338.11, change: 5.51 },
+    { symbol: 'AFR', name: 'Afromedia', shares: 3, avgPrice: 132.18, currentPrice: 129.82, change: -1.79 },
+    { symbol: 'MTN', name: 'MTN', shares: 8, avgPrice: 142.56, currentPrice: 149.84, change: 5.11 },
+    { symbol: 'MAY', name: 'Maybaker', shares: 12, avgPrice: 218.76, currentPrice: 201.43, change: -7.92 },
   ];
   
   const watchlistStocks = [
-    { symbol: 'AAPL', price: 178.42, change: 1.87 },
-    { symbol: 'MSFT', price: 338.11, change: 0.92 },
-    { symbol: 'GOOGL', price: 129.82, change: -0.45 },
-    { symbol: 'AMZN', price: 149.84, change: 1.23 },
-    { symbol: 'TSLA', price: 201.43, change: -2.15 },
+    { symbol: 'NES', price: 178.42, change: 1.87 },
+    { symbol: 'TOTAL', price: 338.11, change: 0.92 },
+    { symbol: 'WAPCO', price: 129.82, change: -0.45 },
+    { symbol: 'MTN', price: 149.84, change: 1.23 },
+    { symbol: 'CON', price: 201.43, change: -2.15 },
     { symbol: 'META', price: 312.75, change: 0.78 },
-    { symbol: 'NVDA', price: 432.89, change: 3.42 },
+    // { symbol: 'GTB', price: 432.89, change: 3.42 },
+    // { symbol: 'DANGCEM', price: 289.50, change: 2.15 },
+    // { symbol: 'ZENITH', price: 175.60, change: -1.25 },
+    // { symbol: 'UBA', price: 145.30, change: 0.85 },
+    // { symbol: 'ACCESS', price: 167.90, change: 1.45 },
+    // { symbol: 'FBNH', price: 198.75, change: -0.65 },
+    // { symbol: 'SEPLAT', price: 890.25, change: 3.75 },
+    // { symbol: 'GUINNESS', price: 245.80, change: -1.95 },
+    // { symbol: 'NESTLE', price: 1450.00, change: 2.35 }
   ];
   
   const newsItems = [
@@ -46,7 +54,7 @@ const App = () => {
     { id: 3, title: 'Apple announces new product line, shares jump 3%', source: 'CNBC', time: '5h ago' },
     { id: 4, title: 'Oil prices drop amid concerns over global demand', source: 'Bloomberg', time: '6h ago' },
     { id: 5, title: 'Tesla beats quarterly earnings expectations', source: 'Reuters', time: '8h ago' },
-    { id: 6, title: 'Crypto market sees renewed interest as Bitcoin surpasses $60,000', source: 'CoinDesk', time: '12h ago' },
+    { id: 6, title: 'Crypto market sees renewed interest as Bitcoin surpasses ₦60,000', source: 'CoinDesk', time: '12h ago' },
   ];
   
   // Initialize chart
@@ -103,7 +111,7 @@ const App = () => {
         },
         series: [
           {
-            name: 'AAPL',
+            name: 'OND',
             type: 'line',
             data: data.map(item => item[1]),
             smooth: true,
@@ -228,7 +236,7 @@ const App = () => {
           <div className="flex items-center justify-center gap-2 space-x-6">
             <div className="text-right">
               <p className="text-sm text-gray-600">Account Balance</p>
-              <p className="font-bold">${accountBalance.toLocaleString()}</p>
+              <p className="font-bold">₦{accountBalance.toLocaleString()}</p>
             </div>
             
             <div className="relative">
@@ -298,15 +306,16 @@ const App = () => {
         </div>
       </header>
       {/* Watchlist Ticker */}
-      <div style={{padding:"0.5rem"}} className=" text-sm bg-[#1a1a1a] rounded-lg ">
-        <div className="flex items-center space-x-6 overflow-x-auto">
+     <marquee className="infinite">
+       <div style={{padding:"0.5rem"}} className=" text-sm bg-[#1a1a1a] rounded-lg w-full">
+        <div className="flex items-center space-x-6 ">
           {watchlistStocks.map(stock => (
-            <div style={{padding:".5rem"}} key={stock.symbol} className="flex items-center space-x-2 whitespace-nowrap cursor-pointer hover:bg-gray-500 gap-1 rounded">
+            <div style={{padding:".5rem"}} key={stock.symbol} className="flex items-center gap-1 space-x-2 whitespace-nowrap cursor-pointer hover:bg-gray-500 rounded">
               <span className="font-medium">{stock.symbol}</span>
               <span className={`text-sm ${stock.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                ${stock.price.toFixed(2)} 
+                ₦{stock.price.toFixed(2)} 
                 <span className="ml-1">
-                  {stock.change >= 0 ? <i className="fas fa-caret-up"></i> : <i className="fas fa-caret-down"></i>}
+                  {stock.change >= 0 ? <FontAwesomeIcon icon={faCaretUp}/> : <FontAwesomeIcon icon={faCaretDown}/> }
                   {Math.abs(stock.change).toFixed(2)}%
                 </span>
               </span>
@@ -314,6 +323,7 @@ const App = () => {
           ))}
         </div>
       </div>
+     </marquee>
       
       {/* Main Content */}
       <main className="p-6 grid grid-cols-5 gap-3" style={{ minHeight: 'calc(100vh - 9rem)' }}>
@@ -323,11 +333,11 @@ const App = () => {
             <div className="flex flex-col gap-0.5 items-start">
               <div className="flex items-center gap-1">
                 <h2 className="text-3xl font-bold">{stockSymbol}</h2>
-                <span className="ml-2 text-gray-600 text-sm">Apple Inc.</span>
+                <span className="ml-2 text-gray-600 text-sm">OANDO.</span>
               </div>
               <div className="flex gap-1 items-center mt-1">
-                <span className="text-lg font-semibold">${stockPrice}</span>
-                <span className={`ml-2 text-sm ${priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                <span className="text-lg font-semibold">₦{stockPrice}</span>
+                <span className={`ml-2 text-sm ₦{priceChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                   {priceChange >= 0 ? '+' : ''}{priceChange.toFixed(2)} ({priceChangePercent.toFixed(2)}%)
                 </span>
               </div>
@@ -442,7 +452,7 @@ const App = () => {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span className="text-gray-500 sm:text-sm">$</span>
+                    <span className="text-gray-500 sm:text-sm">₦</span>
                   </div>
                   <input
                     type="text"
@@ -457,11 +467,11 @@ const App = () => {
             <div className="flex flex-col gap-2 mb-4">
               <div className="flex justify-between text-sm mb-1">
                 <span className="text-gray-600">Estimated Cost</span>
-                <span className="font-medium">${(stockPrice * parseInt(quantity || '0')).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                <span className="font-medium">₦{(stockPrice * parseInt(quantity || '0')).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">Available Cash</span>
-                <span className="font-medium">${accountBalance.toLocaleString()}</span>
+                <span className="font-medium">₦{accountBalance.toLocaleString()}</span>
               </div>
             </div>
             
@@ -507,10 +517,10 @@ const App = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{stock.shares}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${stock.avgPrice.toFixed(2)}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${stock.currentPrice.toFixed(2)}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₦{stock.avgPrice.toFixed(2)}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₦{stock.currentPrice.toFixed(2)}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      ${(stock.shares * stock.currentPrice).toFixed(2)}
+                      ₦{(stock.shares * stock.currentPrice).toFixed(2)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span style={{padding:"3px"}} className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${stock.change >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
@@ -531,7 +541,7 @@ const App = () => {
         <div style={{padding:"1.5rem"}}  className="flex flex-col gap-2 col-span-2 bg-[#1a1a1a] rounded-lg shadow-sm text-gray-300">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold">Market News</h2>
-            <button className="text-sm text-indigo-600 hover:text-indigo-800 cursor-pointer whitespace-nowrap !rounded-button">
+            <button className="text-sm text-[var(--primary)] hover:text-emerald-600 cursor-pointer whitespace-nowrap !rounded-button">
               View All
             </button>
           </div>

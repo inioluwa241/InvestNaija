@@ -7,11 +7,6 @@ import Link from "next/link";
         <section style={{padding:"15rem 5rem"}} className="relative pt-32 pb-20 overflow-hidden bg-gray-900">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 z-0"></div>
         <div className="absolute right-0 top-0 w-full h-full overflow-hidden z-0 bg-gray-900">
-          {/* <img
-            src="/images/hero-bg-1.jpg"
-            alt="Hero Background"
-            className="object-cover object-top w-full h-full opacity-70"
-          /> */}
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col gap-5 md:flex-row items-center">
