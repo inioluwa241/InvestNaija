@@ -6,10 +6,9 @@ import WelcomeSection from "./WelcomeSecion";
 
 function AiMain(props) {
   const [messagesArr, setMessageArr] = useState(" ");
-  console.log(props.messagesArrObj);
-  // const messagesArrObj = props.messagesArrObj;
-  // const responseArrObj = props.responseArr;
-  // console.log(responseArrObj);
+  const AiReply = props.chatArrObj;
+  console.log(props.chatArrObj);
+  // console.log(`${AiReply[0].question}:${AiReply[0].reply}`);
 
   const getIt = function (id) {
     fetch("http://localhost:3003", {
@@ -55,44 +54,56 @@ function AiMain(props) {
             marginBottom: "4rem",
           }}
         >
-          <pre
-            style={{
-              margin: "0 0 2rem 0",
-              fontFamily: "inherit",
-              lineHeight: "1",
-              whiteSpace: "pre-wrap",
-              background: "var(--light-background)",
-              maxWidth: "35rem",
-              padding: "1rem 1.3rem",
-              alignSelf: "flex-start",
-              borderRadius: "25px",
-            }}
-          >
-            {messagesArr}
-          </pre>
-          {/* {messagesArrObj
-            ? messagesArrObj.map((message, index) => {
+          {AiReply
+            ? AiReply.map((message, index) => {
                 const odd = index % 2 === 0;
                 return (
-                  <p
-                    key={index}
+                  <div
                     style={{
-                      background: "blue",
-                      padding: "1rem 1.3rem",
-                      alignSelf: odd ? "flex-end" : "flex-start",
-                      borderRadius: "25px",
-
-                      // display: "inline",
-                      // position: "fixed",
-                      // top: "0",
-                      // right: "0",
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: "column",
                     }}
+                    key={index}
                   >
-                    {message.text}
-                  </p>
+                    <pre
+                      style={{
+                        margin: "0 0 2rem 0",
+                        fontFamily: "inherit",
+                        fontSize: "1.1rem",
+                        lineHeight: "1.2",
+                        letterSpacing: "1px",
+                        whiteSpace: "pre-wrap",
+                        background: "var(--light-background)",
+                        maxWidth: "35rem",
+                        padding: "1rem 1.3rem",
+                        alignSelf: "flex-end",
+                        borderRadius: "25px",
+                      }}
+                    >
+                      {message.question}
+                    </pre>
+                    <pre
+                      style={{
+                        margin: "0 0 2rem 0",
+                        fontFamily: "inherit",
+                        fontSize: "1.1rem",
+                        lineHeight: "1.2",
+                        letterSpacing: "1px",
+                        whiteSpace: "pre-wrap",
+                        background: "var(--light-background)",
+                        maxWidth: "35rem",
+                        padding: "1rem 1.3rem",
+                        alignSelf: "flex-start",
+                        borderRadius: "25px",
+                      }}
+                    >
+                      {message.reply}
+                    </pre>
+                  </div>
                 );
               })
-            : ""} */}
+            : ""}
         </div>
       </article>
     </section>

@@ -12,6 +12,7 @@ function AiInput(props) {
     console.log(searchInput);
     e.preventDefault();
     props.onSendMessage(searchInput);
+    setSearchInput(" ");
   };
   const onchangeHandler = (e) => {
     const text = e.target.value;
@@ -40,6 +41,7 @@ function AiInput(props) {
         <input
           className={`${focused ? "focus" : ""}`}
           placeholder="Ask about finance, trading, stock, or your portfolio..."
+          value={searchInput}
           style={{
             border: "1px solid var(--border)",
             borderRadius: "25px",
